@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'microsoft yahei', 'sans-serif';
+    }
+    ul.img-list {
+         display: none;
+        list-style: none;
+        width: 864px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        transform:translate(-50%, 0);
+    }
+    ol>li>input{
+        width: 80px;
+        height: 50px;
+        position: absolute;
+        margin-left: -80px;
+        top:0;
+        opacity: 0;
+       }
+    ol>li>input:checked + ul.img-list{
+        display: block;
+    }
+    .container {
+        width: 100%;
+        height: 380px;
+        background: #ffe4c4;
+        position: relative;
+        top:0;
+    }
+    .navigation {
+        width: 100%;
+        height: 50px;
+        background-color: #000;
+        color: #fff;
+    }
+    .navigation b {
+        float: left;
+        line-height: 50px;
+        padding-left: 35px;
+        
+    }
+    ol {
+        position: relative;
+    }
+
+    ol>li{
+        list-style: none;
+        float: left;
+        margin:0 auto;
+        width: 80px;
+
+
+    }div>ol>li:hover a{
+        color: green;
+        cursor: pointer;
+    }
+  
+    div>ol>li>a{
+        line-height: 50px;
+        padding-left: 35px;
+        text-decoration: none;
+        font-size: 7px;
+        color: #fff;
+
+    }  
+
+    ul>li {
+        float: left;
+        width: 180px;
+        height: 111px;
+        margin: 30px 20px 0px 10px;
+        position: relative;
+        box-sizing: border-box;
+        border: 3px solid #fff;
+        
+    }
+    ul>li:hover {
+        border-color: #789;
+    }
+
+    ul>li .hover-li {
+        display: none;
+        width: 174px;
+        height: 30px;
+        background:rgba(0, 0, 0, 0.4); 
+        position: absolute;
+        top: 75px;
+    }
+    ul>li:hover .hover-li {
+        display: block;
+        cursor: pointer;
+    }
+    ul>li .hover-li>span {
+        padding-left: 15px;
+        color: #fff;
+        line-height: 30px;
+
+    }
+    ul>li>img {
+        width: 100%;
+        height: 105px;
+    }
+    ul>li .checked {
+        display: none;
+        position: absolute;
+        top:-15px;
+        left: 165px;  
+    }
+    ul>li>div img{
+        width: 30px;
+        height: 30px;
+    }
+    ul>li>input{
+        display: block;
+        width: 174px;
+        height: 105px;
+        position: absolute;
+        top:0;
+        opacity: 0;
+        /*鼠标指针样式*/
+        cursor: pointer;
+    }
+  
+    ul>li>input:checked + div.checked {
+        display: block;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <b>装扮我的主页</b>
+            <ol>
+                <li> 
+                    <a href="" >最热</a>
+                    <input type="radio" name="margin" value="1" checked>
+                    <ul class="img-list">
+                        <li>
+                            <img src="images/1/1.jpg" alt="checked">
+
+                            <div class="hover-li">
+
+                                <span>
+                                 春分之日
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/1/2.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                   秋叶
+                            </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/1/3.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    梦中之影
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="3">
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                         <li>
+                            <img src="images/1/4.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                     蓝天自造
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="4" >
+                             <div class="checked">
+                             <img src="images/right.png">
+                             </div>
+                         </li>
+                         <li>
+                            <img src="images/1/5.jpg" alt="">
+                            <div class="hover-li">
+                                <span> 
+                                    夏日海滩
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="5" >
+                            <div class="checked">
+                                 <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/1/6.jpg" alt="">
+                            <div class="hover-li">
+                                <span>  
+                                     春之路
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="6" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/1/7.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    立夏之日
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="7" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/1/8.jpg"  alt="">
+                            <div class="hover-li">
+                                <span>
+                                    大雪
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="8" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>            
+                        </li>
+                    </ul>
+                
+                </li>
+                <li>
+                    <a href="">最新</a>
+                    <input type="radio" name="margin" value="2"> 
+                    <ul class="img-list">
+                    <li>
+                            <img src="images/3/1.jpg" alt="checked">
+
+                            <div class="hover-li">
+                                <span>
+                                我是歌手
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/3/2.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    跨年环球歌会
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/3/3.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    云癫之上
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="3">
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/3/4.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    360手机 N4
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="4" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/3/5.jpg" alt="">
+                            <div class="hover-li">
+                                <span> 
+                                    春晚
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="5" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/3/6.jpg" alt="">
+                            <div class="hover-li">
+                                <span>  
+                                    华为荣耀
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="6" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/3/7.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    铭泰赛车
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="7" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/3/8.jpg"  alt="">
+                            <div class="hover-li">
+                                <span>
+                                    小丈夫
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="8" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>            
+                        </li>
+                    </ul>
+                </li>
+                          
+                <li>
+                    <a href="">明星</a>
+                    <input type="radio" name="margin" value="3">
+                    <ul class="img-list">
+                    <li>
+                            <img src="images/4/1.jpg" alt="checked">
+
+                            <div class="hover-li">
+                                <span>
+                                范冰冰
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/4/2.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    火力全开，王力宏
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/4/3.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    幻城
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="3">
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/4/4.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    吴亦凡
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="4" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/4/5.jpg" alt="">
+                            <div class="hover-li">
+                                <span> 
+                                    仙女.杨幂
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="5" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/4/6.jpg" alt="">
+                            <div class="hover-li">
+                                <span>  
+                                    怦然心动
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="6" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/4/7.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    来自星星的你
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="7" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/4/8.jpg"  alt="">
+                            <div class="hover-li">
+                                <span>
+                                    刘青云
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="8" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>            
+                        </li>
+                    </ul>
+                </li>
+                              
+                <li>
+                    <a href="">卡通</a>
+                    <input type="radio" name="margin" value="4" >
+                    <ul class="img-list">
+                    <li>
+                            <img src="images/2/1.jpg" alt="checked">
+
+                            <div class="hover-li">
+                                <span>
+                                胡小妮
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/2/2.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    名侦探柯南
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="2" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/2/3.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    CC猫陪你过冬
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="3">
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/2/4.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    我的世界
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="4" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/2/5.jpg" alt="">
+                            <div class="hover-li">
+                                <span> 
+                                    流氓兔清凉海底
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="5" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/2/6.jpg" alt="">
+                            <div class="hover-li">
+                                <span>  
+                                    Ladc CC
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="6" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/2/7.jpg" alt="">
+                            <div class="hover-li">
+                                <span>
+                                    泡泡兵
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="7" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/2/8.jpg"  alt="">
+                            <div class="hover-li">
+                                <span>
+                                    流氓兔春雨
+                                </span>
+                            </div>
+                            <input type="radio" name="movie" value="8" >
+                            <div class="checked">
+                                <img src="images/right.png">
+                            </div>            
+                        </li>
+                    </ul>
+                </li>
+                
+            </ol>
+        </div>
+        <!-- <ul class="img-list">
+           <li>
+                <img src="images/2/1.jpg" alt="checked">
+
+                <div class="hover-li">
+                    <span>
+                        胡小妮
+                   </span>
+                </div>
+                <input type="radio" name="movie" value="2" >
+                <div class="checked">
+                    <img src="images/right.png">
+                </div>
+            </li>
+            <li>
+                <img src="images/2/2.jpg" alt="">
+                <div class="hover-li">
+                    <span>
+                        名侦探柯南
+                   </span>
+                </div>
+                <input type="radio" name="movie" value="2" >
+                <div class="checked">
+                    <img src="images/right.png">
+                </div>
+            </li>
+            <li>
+                <img src="images/2/3.jpg" alt="">
+                <div class="hover-li">
+                    <span>
+                        CC猫陪你过冬
+                    </span>
+                </div>
+                <input type="radio" name="movie" value="3">
+                <div class="checked">
+                    <img src="images/right.png">
+                </div>
+            </li>
+            <li>
+                <img src="images/2/4.jpg" alt="">
+                <div class="hover-li">
+                    <span>
+                        我的世界
+                    </span>
+                </div>
+                <input type="radio" name="movie" value="4" >
+                <div class="checked">
+                <img src="images/right.png">
+                </div>
+            </li>
+            <li>
+                <img src="images/2/5.jpg" alt="">
+                <div class="hover-li">
+                    <span> 
+                        流氓兔清凉海底
+                    </span>
+                </div>
+                <input type="radio" name="movie" value="5" >
+                <div class="checked">
+                    <img src="images/right.png">
+                </div>
+            </li>
+            <li>
+                <img src="images/2/6.jpg" alt="">
+                <div class="hover-li">
+                    <span>  
+                        Ladc CC
+                    </span>
+                </div>
+                <input type="radio" name="movie" value="6" >
+                <div class="checked">
+                    <img src="images/right.png">
+                </div>
+            </li>
+            <li>
+                <img src="images/2/7.jpg" alt="">
+                <div class="hover-li">
+                    <span>
+                        泡泡兵
+                    </span>
+                </div>
+                <input type="radio" name="movie" value="7" >
+                <div class="checked">
+                    <img src="images/right.png">
+                </div>
+            </li>
+            <li>
+                <img src="images/2/8.jpg"  alt="">
+                <div class="hover-li">
+                    <span>
+                        流氓兔春雨
+                    </span>
+                </div>
+                <input type="radio" name="movie" value="8" >
+                <div class="checked">
+                    <img src="images/right.png">
+                </div>            
+            </li>
+        </ul> -->
+        
+
+        <!-- <div class="img-list">
+            <div class="img-div"><img src="lmage/1.png"></div>
+            <div class="img-div"><img src="lmage/2.png"></div>
+            <div class="img-div"><img src="lmage/3.png"></div>
+            <div class="img-div"><img src="lmage/4.png"></div>
+            <div class="img-div"><img src="lmage/5.png"></div>
+            <div class="img-div"><img src="lmage/6.png"></div>
+            <div class="img-div"><img src="lmage/7.png"></div>
+            <div class="img-div"><img src="lmage/8.png"></div>
+        </div> -->
+    </div>
+</body>
+</html> 
